@@ -15,5 +15,5 @@ echo "Log Directory: log/$JOB_ID"
 $1 --standalone \
     --nproc_per_node=$NUM_GPUS \
     --rdzv-backend=c10d \
-    -m src.train --data-cfg log/$JOB_ID/data_cfg.toml --train-cfg log/$JOB_ID/train_cfg.toml \
+    -m cnn.train --data-cfg log/$JOB_ID/data_cfg.toml --train-cfg log/$JOB_ID/train_cfg.toml \
     > log/$JOB_ID/log.out 2> log/$JOB_ID/err.out
