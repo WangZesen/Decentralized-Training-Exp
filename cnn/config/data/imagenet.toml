@@ -1,0 +1,3 @@
+data_dir = "./data/Imagenet"
+sharded_data_dir = "./data/Imagenet-sharded"
+num_classes = 1000

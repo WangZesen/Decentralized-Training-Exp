@@ -1,0 +1,39 @@
+backend = "decentdp"
+topology = "alternating-exp-ring"
+batch_size = 1024
+max_epochs = 90
+lr = 1.5e-3
+label_smoothing = 0.1
+checkpoint_dir = ""
+arch = "resnet50"
+use_amp = true
+
+[preprocess]
+preload_local = false
+interpolation = "bilinear"
+train_crop_size = 176
+val_image_size = 256
+val_crop_size = 224
+
+[optim]
+name = 'accumadam'
+weight_decay = 0.000030517578125
+beta1 = 0.9
+beta2 = 0.999
+epsilon = 1e-8
+accum_iter = 8
+
+[lr_scheduler]
+name = 'cosine'
+warmup_epochs = 5
+warmup_decay = 0.01
+
+[reproduce]
+seed = 810975
+
+[log]
+log_dir = './log'
+log_freq = 100
+wandb_on = true
+wandb_project = "cnn-imagenet"
+ckpt_freq = 45

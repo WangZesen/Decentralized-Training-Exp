@@ -1,0 +1,5 @@
+/gpt2/data/*/*.bin
+/cnn/data/
+**/log/
+**/__pycache__/
+**/wandb/

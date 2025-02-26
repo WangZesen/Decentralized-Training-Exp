@@ -1,0 +1,8 @@
+data_dir = './data/wmt14_en_fr'
+src_lang = 'en'
+tgt_lang = 'fr'
+truncate = 156
+
+[tokenizer]
+model = 'wordpiece'
+vocab_size = 32000

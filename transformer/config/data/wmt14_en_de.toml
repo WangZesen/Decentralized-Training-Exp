@@ -1,0 +1,8 @@
+data_dir = './data/wmt14_en_de'
+src_lang = 'en'
+tgt_lang = 'de'
+truncate = 156
+
+[tokenizer]
+model = 'bpe'
+vocab_size = 37120

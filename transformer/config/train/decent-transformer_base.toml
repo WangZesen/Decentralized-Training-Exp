@@ -1,0 +1,35 @@
+backend = 'decentdp'
+topology = 'complete'
+max_token_per_batch = 25000
+label_smoothing = 0.1
+max_epochs = 20
+use_amp = true
+
+[optim]
+name = "accumadam"
+lr = 0.0007
+betas = [0.9, 0.999]
+eps = 1e-9
+accum_iter = 4
+
+[model]
+arch = "transformer"
+d_model = 512
+num_heads = 8
+num_layers = 6
+dim_feedforward = 2048
+dropout = 0.1
+
+[lr_scheduler]
+type = 'inverse_sqrt'
+warmup_steps = 4000
+warmup_decay = 0.01
+
+[log]
+log_freq = 250
+wandb_on = true
+wandb_project = "reproduce_transformer"
+checkpoint_freq = 1
+
+[reproduce]
+seed = 810977

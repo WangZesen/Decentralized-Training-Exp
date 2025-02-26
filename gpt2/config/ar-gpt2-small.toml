@@ -1,0 +1,43 @@
+log_dir = "./log"
+dataset = "openwebtext"
+data_dir = "./data/openwebtext"
+in_memory = true
+
+[log]
+wandb_log = true
+wandb_project = "gpt2-owt"
+eval_interval = 1000
+eval_steps = 200
+
+[train]
+backend = 'pytorchddp'
+seed = 42
+global_batch_size = 480
+context_length = 1024
+n_steps = 600000
+grad_norm_clip = 1.0
+compile = true
+amp = true
+
+[train.optim]
+name = "adamw"
+betas = [
+    0.9,
+    0.95,
+]
+eps = 1e-08
+weight_decay = 0.1
+
+[train.lr_schedule]
+name = "cosine"
+lr = 6e-04
+warmup_steps = 2000
+eta_min = 6e-05
+
+[model]
+n_layers = 12
+n_heads = 12
+n_embd = 768
+dropout = 0.0
+vocab_size = 50304
+bias = false
