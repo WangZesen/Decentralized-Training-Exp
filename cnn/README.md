@@ -1,12 +1,8 @@
-# Reproduce Image Classification on ImageNet
-
-Todo:
-- [ ] configuration files for various circumstances
-- [ ] complete instruction in README for reproducing experiments
-- [ ] validate the script for plotting
-
+# Image Classification on ImageNet with Decentralized Training
 
 ## Introduction
+
+The folder contains the experiment code for training ResNet-50 on ImageNet-1K. It includes both AllReduce training and decentralized training.
 
 ## Reproduce Experiments
 
@@ -36,15 +32,13 @@ The versions of dependencies under test are listed in [`requirements.txt`](./req
 > [!NOTE]
 > The codebase of the wrapper for decentralized training (`decent-dp`) is not directly available in this repository, and it's installed as a dependency and the source code is available at [Decent-DP](https://github.com/WangZesen/Decent-DP).
 
-
-
 ### Prepare Data
 
 Since it needs to sign an agreement for downloading the dataset, only an instruction is provided here.
 
 Download the ImageNet (ILSVRC 2012) dataset from [here](https://www.image-net.org/).
 
-Put the data under `./data/Imagenet` and arrage the data like
+Put the data under `./data/Imagenet` and arrage the files like
 ```
 data/Imagenet/
 ├── dev
@@ -66,11 +60,16 @@ data/Imagenet/
 │   ├── ...
 ```
 
+> [!NOTE]
+> Note that the images in validation dataset should also be arranged by classes like in `train`.
+
 > [!WARNING]
 > **Avoid the IO bottleneck to achieve best possible efficiency**
-> An efficient data loader is one of the key factors to a overall efficient training systems. To avoid the bottleneck cause by disk IO, the data MUST be placed in local SSD otherwise other optimization techniques will be hindered. In our experiments on shared clusters, the data is stored in a network drive. `preload` in the training configuration controls whether the data will be copied to local SSD before the training. To make the preload work, shards of the data needs to be created. See next section for details.
+> An efficient data loader is one of the key factors to a overall efficient training systems. To avoid the bottleneck cause by disk IO, the data MUST be placed in local SSD otherwise the speedup brought by other optimization techniques (like decentralized training or AMP training) will be hindered. In our experiments on shared clusters, the data is stored in a network drive. `preload` in the training configuration controls whether the data will be copied to local SSDs of compute nodes before the training. To make the preload work, shards of the data needs to be created. See next section for details.
 
 #### (Optional) Create Shards for Fast Preloading
+
+To be added.
 
 ### Train
 

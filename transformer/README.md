@@ -1,8 +1,10 @@
-# Reproduce [*Attention is All You Need*](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) (PyTorch)
+# Neural Machine Translation on WMT-14 with Decentralized Training
 
 ## Introduction
 
 This repo is an unofficial reproduction of the experiments conducted in the paper "Attention is All You Need" [[1](#reference)] based on PyTorch 2.3.0 (latest stable version by the time of setting up this repo). The training, validation and test sets are from WMT14 [[2](#reference)].
+
+The repo additionally includes decentralized training.
 
 ## Reproduce Experiments
 
