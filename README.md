@@ -1,4 +1,9 @@
-# High-Performance Decentralized Training Experiments
+# From Promise to Practice: Realizing High-performance Decentralized Training
+
+[![arXiv](https://img.shields.io/badge/arXiv-2401.11998-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.11998) 
+[![OpenReview](https://img.shields.io/badge/OpenReview-Paper-blue)](https://openreview.net/forum?id=lo3nlFHOft)
+
+
 
 Welcome to the official repository for **"From Promise to Practice: Realizing High-Performance Decentralized Training."** This repository contains the code and experimental setups for the decentralized training of deep neural networks, including **ResNet, Transformers, and GPT-2**.
 
