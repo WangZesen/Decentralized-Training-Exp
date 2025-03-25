@@ -43,9 +43,8 @@ Please refer to [`transformer/README.md`](./transformer/README.md) for details.
 
 Please refer to [`gpt2/README.md`](./gpt2/README.md) for details.
 
-## 🥝 PyTorch Extension
-
-The PyTorch extension that facilitates the decentralized training is wrapped as a Python package: **Decent-DP** ([Github](https://github.com/WangZesen/Decent-DP), [PyPI](https://pypi.org/project/decent-dp/)).
+## <img src="https://raw.githubusercontent.com/WangZesen/Decent-DP/main/doc/source/_static/icon-light.png" alt="logo" width="20"/> PyTorch Extension
+The PyTorch extension that facilitates the decentralized training is wrapped as a Python package: <img src="https://raw.githubusercontent.com/WangZesen/Decent-DP/main/doc/source/_static/icon-light.png" alt="logo" width="20"/> **Decent-DP** ([Github](https://github.com/WangZesen/Decent-DP), [PyPI](https://pypi.org/project/decent-dp/)).
 
 ## 📊 Benchmark Results
 
