@@ -50,6 +50,10 @@ The PyTorch extension that facilitates the decentralized training is wrapped as 
 
 Our experiments demonstrate that decentralized training can achieve **better scalability** and **comparable generalization** to All-Reduce training while reducing communication overhead.
 
+<p align="center"><img src="./images/resnet_generalization.png" alt="" width="80%"/></p>
+<p align="center"><img src="./images/transformer_generalization.png" alt="" width="80%"/></p>
+<p align="center"><img src="./images/transformer_runtime.png" alt="" width="80%"/></p>
+<p align="center"><img src="./images/transformer_generalization_vs_runtime.png" alt="" width="80%"/></p>
 
 ## 📝 Citation
 
